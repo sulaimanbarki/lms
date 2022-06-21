@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #fdf4e2;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+}
+
+p {
+    font-size: 1.4rem;
+    font-family: 'Merriweather', serif;
+}
+
+
+/* .topimage {
+    background-image: url('images/contact.jpg');
+    margin-left: -15px;
+    width: 105vw;
+    margin-left: -2px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh !important;
+} */
+
+.navbar {
+    height: 10rem;
+}
+
+.logo {
+    margin-bottom: -6rem;
+    width: 50px;
+}
+
+#navbarNav ul li a {
+    color: #FFF;
+    height: 3rem;
+    font-size: 1.5rem;
+    transition: font-size .2s;
+    -webkit-transition: font-size .2s;
+    -moz-transition: font-size .2s;
+    -ms-transition: font-size .2s;
+    -o-transition: font-size .2s;
+}
+
+#navbarNav ul li a:hover {
+    box-shadow: 0 5px 2px -2px #000;
+    font-size: 1.7rem;
+}
+
+hr {
+    opacity: 1 !important;
+}
+
+@media (max-width: 768px) {
+    #header_text {
+        /* border: 2px solid red; */
+        /* margin-top: 6rem !important; */
+        display: None;
+    }
+    #header_text h2 {
+        font-size: 2rem !important;
+        ;
+    }
+    .topimage {
+        height: 30vh;
+    }
+    .header_nav .logo {
+        display: none !important;
+    }
+    /* .header_text h1 {
+        display: none !important;
+    /* } */
+    .header_navbar {
+        display: flex;
+        align-items: right;
+        position: fixed;
+    }
+    #navbarNav ul li a {
+        font-size: 1rem;
+        text-align: right;
+        margin-top: 1rem;
+    }
+    .about_us {
+        height: 40rem !important;
+    }
+    .why_us,
+    img {
+        height: 50rem !important;
+        width: 60rem !important;
+    }
+    #freelacing_show_img .freelacing_img {
+        width: 100%;
+        flex-direction: column;
+        height: 35vh;
+    }
+    .footer_img {
+        height: 100% !important;
+    }
+    .footer .footer_logo {
+        display: flex;
+        margin-left: 40% !important;
+    }
+    .footer .nav {
+        display: none !important
+    }
+    .footer .counter {
+        display: none !important;
+    }
+    .footer .follow {
+        display: none !important;
+    }
+    .footer #vertical_icons {
+        display: none !important;
+    }
+    /* ======= freelacing  freelacing_show_img ===== */
+}
+
+
+/* ================================= 992 ================================================================= */
+
+@media (max-width: 992px) {
+    #header_text {
+        /* border: 2px solid red; */
+        margin-top: 18rem;
+    }
+    #header_text h2 {
+        font-size: 3rem
+    }
+    .topimage {
+        height: 30vh;
+    }
+    .header_nav .logo {
+        display: none !important;
+    }
+    .header_text h2 {
+        font-size: 4rem;
+    }
+    .header_text {
+        font-size: 1.7rem;
+    }
+    /* ==================== courses ================= */
+    /* .courses_tumb_img img {
+        width: 30rem;
+        height: 30rem;
+    } */
+    /* ==================== courses ================= */
+    .about_us {
+        height: 30rem !important;
+    }
+    .why_us,
+    img {
+        height: 60rem;
+        width: 80rem;
+    }
+    .header_nav .logo {
+        max-width: 25rem !important;
+        max-height: 10rem !important;
+    }
+    footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+    .footer .footer_logo {
+        display: inline;
+    }
+    .footer .follow {
+        display: none !important;
+    }
+}
+
+
+/* ============================= 12000 ================================== */
+
+@media (max-width: 1200px) {
+    #header_text {
+        /* border: 2px solid red; */
+        margin-top: 18rem;
+    }
+    #header_text h2 {
+        font-size: 2.7rem
+    }
+    .why_us,
+    img {
+        height: 85rem;
+    }
+    /* ======= freelacing  freelacing_show_img ===== */
+    /* ======= freelacing  freelacing_show_img ===== */
+    /* ======= footer logo ===== */
+    .footer .footer_logo {
+        display: inline;
+    }
+    .header_nav .logo {
+        max-width: 25rem !important;
+        max-height: 10rem !important;
+    }
+    .footer .footer_logo img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+    .foo.footer_logo img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+}
+
+@media (max-width: 1800px) {
+    #header_text {
+        /* border: 2px solid red; */
+        margin-top: 12rem;
+    }
+    #header_text h2 {
+        font-size: 3rem;
+        ;
+    }
+}
