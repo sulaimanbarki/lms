@@ -19,13 +19,28 @@
                 <!-- end header nav -->
 
                 <!-- ENGINEERING GrurruHedigning  -->
-                <div class=" row col-md-12 col-sm-12 ms-3 " id="header_text" >
+
+
+
+
+
+                <div class=" row col-md-6 col-sm-6 ms-3 "  id="header_text" >
                     <h2 class=" text-light fw-bold" style="font-size: 5rem; letter-spacing: 2px; ">ENGINEERING GURRU</h2>
                     <p class="p-2 text-light  " style="font-size: 2rem; letter-spacing: .5px;">Use Engineering Gurru to
                         learn about engineering, <br> software tutorials, and to make money as a freelancer <br> through
                         different freelancing platforms.</p>
                 </div>
 
+
+
+<div class="row" style="margin-top: -80px; ">
+<div class="" style="position: absolute; margin-left:-1rem;  ">
+    <iframe  style="float: right;" width="500" height="350px"
+        src="https://www.youtube.com/embed/Mw4ePImwMy4">
+    </iframe>
+</div>
+
+</div>
             </div>
 
         </div>
@@ -44,8 +59,8 @@
 
 
     <!-- why us -->
-    <div id="why_us" class="col-lg-12 col-md-8 col-sm-6 why_us " style="text-align:center;">
-        <img id="why_us" class="img img-fluid" src="{{asset('images/pages/Home/1200/2.jpg')}}" alt="">
+    <div id="why_us" class="col-lg-12 col-md-8 col-sm-6 mt-5 why_us " style="text-align:center;">
+            <img id="why_us" class="img img-fluid" src="{{asset('images/pages/Home/1200/2.jpg')}}" alt="">
     </div>
 
 
@@ -75,9 +90,7 @@
 
 
     <!-- engineering -->
-
-
-    <div class="container">
+    <div class="container engineering_main">
             <div class="row d-flex align-items-center " >
                     <div class="col-md-7 p-5">
                             <h2>ENGINEERING</h2>
@@ -87,8 +100,8 @@
                         </div>
 
 
-                <div class="col-md-5 p-5"  >
-                    <img src="images/4.png" class="img-fluid p-5 " style="" alt="">
+                <div class="col-md-5 p-5 engineering_img_div ">
+                    <img src="images/4.png" class="img-fluid p-5 engineering_img " style="" alt="">
                 </div>
 
             </div>
@@ -101,7 +114,7 @@
     </div>
 
     <!-- Freelancing -->
-    <div class="container">
+    <div class="container freelancing_main">
         <div class="row d-flex align-items-center ">
 
             <div class="col-md-7 p-5">
@@ -116,8 +129,8 @@
         </div>
 
 
-      <div class="col-md-5 p-5">
-            <img src="images/5.png" class="img-fluid p-5 " style="" alt="">
+      <div class="col-md-5 p-5 freelancing_img_header">
+            <img src="images/5.png" class="img-fluid freelancing_img p-5 " style="" alt="">
         </div>
     </div>
 </div>

@@ -36,12 +36,11 @@
                         @php
                             $subjects = \App\Models\Subject::all();
                         @endphp
-                        <div class="form-group">
+                        <div class="form-group d-none">
                             <label for="subject_id">Subject</label>
                             <select name="subject_id" id="subject_id" class="form-control">
-                                @foreach ($subjects as $subject)
-                                <option value="{{$subject->id}}" @if($video->subject_id == $subject->id) selected @endif>{{$subject->name}}</option>
-                                @endforeach
+                                {{-- select subject --}}
+                                <option value="1">Select Subject</option>
                             </select>
                         </div>
                         <div class="form-group">

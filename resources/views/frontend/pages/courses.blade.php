@@ -47,48 +47,104 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="video-list">
-                    <div class="row" id="blog-post">
+                    <div class="row g-3 courses " id="blog-post">
                         @foreach ($videos as $video)
-                        <div class="col-md-3">
+                        <div class="col-lg-3 col-md-4 col-sm-6 courses_video">
                             <div class="video-item">
                                 <div class="video-info">
-
-
 
                                     {{-- add videos --}}
                                     @if($video->is_playlist)
 
 
-                                    <div class="card" style="width: 18rem;">
+                                    <div class="card" style="width: 25rem;">
                                         {{-- <img src="https://picsum.photos/200/200" class="card-img-top" alt="...">
                                         --}}
                                         <img src="{{ asset('uploads/thumbnail/'.$video->thumbnail_url) }}"
-                                            class="card-img-top" alt="...">
+                                            class=" img-fluid card-img-top" alt="...">
                                         <div class="card-body">
                                             <h5 class="card-title">
                                                 <a href="/coursess/{{$video->id}}">
-                                                    <h5>{{ $video->title }}</h5>
+                                                    <h3 class="mb-3">{{ $video->title }}</h3>
                                                 </a>
                                             </h5>
-                                            <a href="/coursess/{{$video->id}}" class="btn btn-primary">Watch Playlist</a>
+                                            @auth
+                                            <a href="/coursess/{{$video->id}}" class="btn btn-primary">Watch Course</a>
+                                            @else
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-primary fw-bold" style="font-size: 1.2rem;" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
+                                                Watch Course
+                                            </button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h3 class="modal-title" id="exampleModalLabel">
+                                                                Login</h3>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <h4 style="text-align: center;color: red;">Please Login First</h4>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <a href="https://engineeringgurru.com/login" class="btn btn-secondary">Login</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endauth
+
                                         </div>
                                     </div>
 
                                     @else
 
                                     {{-- single video --}}
-                                    <div class="card" style="width: 18rem;">
+                                    <div class="card" style="width: 25rem;">
                                         {{-- image from public/uploads/thumbnail --}}
                                         <img src="{{ asset('uploads/thumbnail/'.$video->thumbnail_url) }}"
-                                            class="card-img-top" alt="...">
+                                            class="img-fluid card-img-top" alt="...">
                                         {{-- <img src="{{}}" class="card-img-top" alt="..."> --}}
                                         <div class="card-body">
                                             <h5 class="card-title">
                                                 <a href="/course/{{$video->id}}">
-                                                    <h5>{{ $video->title }}</h5>
+                                                    <h3 class="mb-3" >{{ $video->title }}</h3>
                                                 </a>
                                             </h5>
+
+
+                                            @auth
                                             <a href="/course/{{$video->id}}" class="btn btn-primary">Watch Video</a>
+                                            @else
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-primary fw-bold" style="font-size: 1.2rem;" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
+                                                Watch Video
+                                            </button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h3 class="modal-title" id="exampleModalLabel">
+                                                                Login</h3>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <h4 style="text-align: center;color: red;">Please Login First</h4>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <a href="https://engineeringgurru.com/login" class="btn btn-secondary">Login</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endauth
+
                                         </div>
                                     </div>
 

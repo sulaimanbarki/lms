@@ -1,0 +1,17 @@
+/* .question_answer_main .question_ans_section,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    visibility: hidden;
+}
+
+.question_answer_main .leading-tight,
+.question_answer_subject,
+.question_answer_department {
+    visibility: hidden;
+} */

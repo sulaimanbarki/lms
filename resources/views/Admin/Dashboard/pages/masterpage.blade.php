@@ -8,6 +8,12 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>{{ config('app.name') }}</title>
+    <!-- favicon -->
+    <link rel="icon" href="{{asset('images/favicon.png')}}" type="image/png">
+
+    <!-- Add custom css  -->
+        <link rel="stylesheet" href="{{ asset('css/backend/style.css') }}">
+
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -20,7 +26,7 @@
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
-        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0" style="visibility: hidden !important ;">
             <div class="input-group">
                 <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
                 <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
@@ -31,17 +37,12 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Settings</a></li>
-                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                    <li>
-                        <hr class="dropdown-divider" />
-                    </li>
+
                     <li>
                         <form action="{{ route('logout') }}" method="post">
-                            @csrf
-                            {{-- <a class="dropdown-item" href="{{route('logout')}}">Logout</a> --}}
+                            @csrf {{-- <a class="dropdown-item" href="{{route('logout')}}">Logout</a> --}}
                             <button class="dropdown-item" type="submit">Logout</button>
-                     </form>
+                        </form>
                     </li>
                 </ul>
             </li>
@@ -85,9 +86,8 @@
 
                         <a class="nav-link" href="{{route('users.index')}}">
                             Users
-                        </a>
-
-                        {{-- <div class="sb-sidenav-menu-heading">Interface</div>
+                        </a> {{--
+                        <div class="sb-sidenav-menu-heading">Interface</div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             Layouts
@@ -148,56 +148,51 @@
                 </div>
             </nav>
         </div>
-<!-- End Sidebar -->
+        <!-- End Sidebar -->
 
 
-<!-- Main content-->
+        <!-- Main content-->
 
-<div id="layoutSidenav_content">
-    <main>
-        <div class="container-fluid px-4">
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
 
-@yield('content')
+                    @yield('content')
 
+                </div>
+            </main>
         </div>
-    </main>
-    </div>
 
-    <!-- Footer -->
+        <!-- Footer -->
 
-<!-- End main content-->
+        <!-- End main content-->
 
-<!-- Footer-->
-{{-- <footer class="py-4 bg-light mt-auto">
-    <div class="container-fluid px-4">
-        <div class="d-flex align-items-center justify-content-between small">
-            <div class="text-muted">Copyright &copy; Your Website 2022</div>
-            <div>
-                <a href="#">Privacy Policy</a>
-                &middot;
-                <a href="#">Terms &amp; Conditions</a>
+        <!-- Footer-->
+        {{--
+        <footer class="py-4 bg-light mt-auto">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                    <div>
+                        <a href="#">Privacy Policy</a> &middot;
+                        <a href="#">Terms &amp; Conditions</a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </footer> --}}
+
+
+        <!-- End Footer-->
     </div>
-</footer> --}}
-
-
-<!-- End Footer-->
-</div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-</script>
-<script src="js/scripts.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-<script src="assets/demo/chart-area-demo.js"></script>
-<script src="assets/demo/chart-bar-demo.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-<script src="js/datatables-simple-demo.js"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+    </script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
 </body>
 
 </html>
-
-
-
-
-

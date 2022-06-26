@@ -54,7 +54,36 @@
                             <label for="floatingTextarea2" class="fw-bold"  style="font-size: 1.3rem;" >Message</label>
                         </div>
                         <div class="mt-3" style="text-align: right;">
-                            <button type="submit" class="btn btn-primary" style="font-size: 1.1rem" >Submit</button>
+
+                            @auth
+                            <button type="submit" class="btn btn-primary fw-bold" style="font-size: 1.3rem">Submit</button>
+                            @else
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary fw-bold" style="font-size: 1.2rem;" data-bs-toggle="modal"  data-bs-target="#exampleModal">
+                                View
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="exampleModalLabel">
+                                                Login</h3>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h4 style="text-align: center;color: red;">Please Login First</h4>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="https://engineeringgurru.com/login" class="btn btn-secondary">Login</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endauth
+
+
                         </div>
                     </form>
                 </div>

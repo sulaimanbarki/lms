@@ -5,16 +5,15 @@
 
             <img src="{{ asset('images/logo.png')}}" alt="Avatar Logo" class="mt-3 img-fluid logo" style="width:160px;">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="navbar-toggler navbar_icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
 
+            <div class="collapse navbar navbar-collapse nav_links_header " id="navbarNav">
 
-            <div class="collapse navbar navbar-collapse " id="navbarNav">
-
-                <ul class="navbar-nav ms-auto " style="text-align: right;" >
+                <ul class="navbar-nav ms-auto navbar_ul" style="text-align: right;" >
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{{route('index')}}">Home</a>
                     </li>
@@ -31,6 +30,11 @@
                         <a class="nav-link" href="{{route('contact')}}" tabindex="-1" aria-disabled="true">Contact
                             us</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('privacy_policy')}}" tabindex="-1" aria-disabled="true">Policy</a>
+                    </li>
+
                     {{-- if logged in then show logout else show log in --}}
                     @if (Auth::check())
                     <li class="nav-item">

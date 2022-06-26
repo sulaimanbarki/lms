@@ -30,6 +30,19 @@ p {
 }
 
 
+/* ==================== courses ================= */
+
+.courses .courses_video .card-img-top {
+    height: 25rem;
+    object-fit: cover;
+    /* width: 30rem;
+        height: 30rem; */
+}
+
+
+/* ==================== courses ================= */
+
+
 /* .topimage {
     background-image: url('images/contact.jpg');
     margin-left: -15px;
@@ -48,6 +61,31 @@ p {
 .logo {
     margin-bottom: -6rem;
     width: 50px;
+}
+
+#question_heading h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+#engineering_random_equation h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+.question_answer_main .shadow-lg img {
+    display: none;
+    visibility: hidden;
 }
 
 #navbarNav ul li a {
@@ -71,53 +109,146 @@ hr {
 }
 
 @media (max-width: 768px) {
+    .header_navbar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: static !important;
+    }
+    .header_navbar .logo {
+        float: left;
+        width: 10rem !important;
+        position: relative;
+        margin: 10px 15px 15px 10px;
+    }
     #header_text {
-        /* border: 2px solid red; */
-        /* margin-top: 6rem !important; */
-        display: None;
+        margin-top: 22rem !important;
     }
     #header_text h2 {
-        font-size: 2rem !important;
-        ;
+        font-size: 1.5rem !important;
+    }
+    #header_text p {
+        font-size: 1rem !important;
+        letter-spacing: .1rem;
     }
     .topimage {
-        height: 30vh;
+        height: 20vh !important;
+        width: 100rem !important;
+        object-fit: cover !important;
     }
-    .header_nav .logo {
-        display: none !important;
-    }
-    /* .header_text h1 {
-        display: none !important;
-    /* } */
     .header_navbar {
         display: flex;
         align-items: right;
         position: fixed;
+    }
+    #navbarNav ul {
+        margin-top: -35px;
     }
     #navbarNav ul li a {
         font-size: 1rem;
         text-align: right;
         margin-top: 1rem;
     }
+    /* =========== about us ========== */
     .about_us {
         height: 40rem !important;
     }
+    .about_us h2 {
+        font-size: 2.3rem !important
+    }
+    .about_us p {
+        font-size: 1.5rem !important;
+    }
+    /* =========== why us ========= */
+    .why_us {
+        display: block;
+        margin: 0 auto;
+    }
     .why_us,
     img {
-        height: 50rem !important;
-        width: 60rem !important;
+        height: 40rem !important;
+        width: 30rem !important;
+        display: block;
+        margin: 0 auto;
     }
     #freelacing_show_img .freelacing_img {
         width: 100%;
         flex-direction: column;
         height: 35vh;
     }
+    /* ==================== courses ================= */
+    .courses {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .courses .courses_video {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .courses .courses_video .card-img-top {
+        height: 20rem !important;
+        object-fit: cover;
+        /* width: 30rem;
+        height: 30rem; */
+    }
+    /* ==================== courses ================= */
+    /* ==================== engineering ================= */
+    .engineering_main h2 {
+        font-size: 2.2rem;
+    }
+    .engineering_main p {
+        font-size: 1.57rem !important;
+    }
+    .engineering_main .engineering_img {
+        width: 40rem;
+        height: 30rem !important;
+        padding: 5rem !important;
+    }
+    /* ==================== engineering ================= */
+    /* ==================== freelancing ================= */
+    .freelancing_main h2 {
+        font-size: 2.3rem !important
+    }
+    .freelancing_main p {
+        font-size: 1.5rem !important;
+    }
+    .freelancing_main .freelancing_img {
+        width: 40rem;
+        height: 30rem !important;
+        padding: 5rem !important;
+    }
+    /* ==================== freelancing ================= */
+    #blog-post {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .blog-posts #freelancing_card {
+        width: 80%;
+    }
+    /* ==================== freelancing ================= */
     .footer_img {
-        height: 100% !important;
+        height: 30rem !important;
+        overflow: hidden;
+    }
+    .footer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
     }
     .footer .footer_logo {
-        display: flex;
-        margin-left: 40% !important;
+        display: flex !important;
+        object-fit: cover;
+        margin-top: -2.5rem;
+        width: 200px;
+        height: auto;
+    }
+    .footer .follow {
+        width: 40rem;
+        /* display: block; */
     }
     .footer .nav {
         display: none !important
@@ -125,11 +256,9 @@ hr {
     .footer .counter {
         display: none !important;
     }
-    .footer .follow {
-        display: none !important;
-    }
     .footer #vertical_icons {
         display: none !important;
+        /* margin-left: 2rem; */
     }
     /* ======= freelacing  freelacing_show_img ===== */
 }
@@ -148,9 +277,9 @@ hr {
     .topimage {
         height: 30vh;
     }
-    .header_nav .logo {
+    /* .header_nav .logo {
         display: none !important;
-    }
+    } */
     .header_text h2 {
         font-size: 4rem;
     }
@@ -158,13 +287,24 @@ hr {
         font-size: 1.7rem;
     }
     /* ==================== courses ================= */
-    /* .courses_tumb_img img {
-        width: 30rem;
-        height: 30rem;
-    } */
+    .courses .courses_video {
+        margin: 1rem;
+        /* width: 30rem;
+        height: 30rem; */
+    }
     /* ==================== courses ================= */
+    /* ==================== freelacing cards margins ================= */
+    #blog-post {
+        width: 100%;
+        display: flex !important;
+        justify-content: space-around!important;
+    }
+    .blog-posts #freelancing_card {
+        margin-right: 2px;
+    }
+    /* ==================== freelacing cards margin ================= */
     .about_us {
-        height: 30rem !important;
+        height: 40rem !important;
     }
     .why_us,
     img {
@@ -178,15 +318,16 @@ hr {
     footer {
         width: 100%;
         display: flex;
+        text-align: center;
         justify-content: center;
         align-items: center;
-        margin-bottom: 3rem;
+        /* margin-bottom: 3rem; */
     }
     .footer .footer_logo {
         display: inline;
     }
     .footer .follow {
-        display: none !important;
+        display: hidden;
     }
 }
 
@@ -205,8 +346,13 @@ hr {
     img {
         height: 85rem;
     }
-    /* ======= freelacing  freelacing_show_img ===== */
-    /* ======= freelacing  freelacing_show_img ===== */
+    /* ======= courses courses_video ===== */
+    .courses .courses_video {
+        margin: 1rem;
+        /* width: 30rem;
+        height: 30rem; */
+    }
+    /* ======= courses courses_video  ===== */
     /* ======= footer logo ===== */
     .footer .footer_logo {
         display: inline;

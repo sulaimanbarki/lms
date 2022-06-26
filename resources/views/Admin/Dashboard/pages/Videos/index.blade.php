@@ -22,7 +22,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Title</th>
-                                <th>Subject</th>
+                                {{-- <th>Subject</th> --}}
                                 <th>Type</th>
                                 <th>Is Active</th>
                                 <th>Action</th>
@@ -36,7 +36,7 @@
                                 @php
                                     $subject = \App\Models\Subject::find($video->subject_id);
                                 @endphp
-                                <td>{{$subject->name}}</td>
+                                {{-- <td>{{$subject->name}}</td> --}}
                                 <td>{{ $video->is_playlist == 1 ? 'Playlist' : 'Video'}}</td>
                                 <td>{{ $video->is_active == 1 ? 'Yes' : 'No'}}</td>
                                 <td>

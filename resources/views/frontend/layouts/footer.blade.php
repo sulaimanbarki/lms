@@ -1,5 +1,5 @@
 <!-- =================================== Footer ===================================-->
-<div class="mt-5 row footer_img  img-fluid" style="background-image: url({{asset('images/7.jpg')}});
+<div class="mt-5 row footer_img  img-fluid"  style="background-image: url({{asset('images/7.jpg')}});
                         width: 100%;
                         background-position: center;
                         background-repeat: no-repeat;
@@ -12,8 +12,8 @@
         <div class="container mt-3 d-flex">
 
             <!-- logo -->
-            <div class="col-md-3 ms-5 footer_logo">
-                <img src="{{asset('images/logo.png')}}" alt="Avatar Logo" class="log-img img-fluid" style="width:160px;">
+            <div class="col-md-3 col-sm-12 ms-5 footer_logo">
+                <img src="{{asset('images/footer_logo.png')}}" alt="Avatar Logo" class="log-img img-fluid" style="width:160px;">
             </div>
 
 
@@ -22,22 +22,22 @@
                 <nav class="navbar">
                     <ul class="nav navbar-nav" style="box-sizing: border-box; padding: 0.5em">
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #FFF; font-size: 1.5rem;" href="#"> Home </a>
+                            <a class="nav-link" style="color: #FFF; font-size: 1.5rem;" href="{{route('index')}}"> Home </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #FFF; font-size: 1.5rem; " href="#"> Engineering </a>
+                            <a class="nav-link" style="color: #FFF; font-size: 1.5rem; " href="{{route('engineering')}}"> Engineering </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #FFF; font-size: 1.5rem; " href="#"> Freelancing </a>
+                            <a class="nav-link" style="color: #FFF; font-size: 1.5rem; " href="{{route('freelancing')}}"> Freelancing </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #FFF; font-size: 1.5rem; " href="#"> Blogs </a>
+                            <a class="nav-link" style="color: #FFF; font-size: 1.5rem; " href="{{route('courses')}}"> Courses </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #FFF; font-size: 1.5rem; " href="#"> Courses </a>
+                            <a class="nav-link" style="color: #FFF; font-size: 1.5rem; " href="{{route('contact')}}"> Contact Us </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #FFF; font-size: 1.5rem; " href="#"> Contact Us </a>
+                            <a class="nav-link" style="color: #FFF; font-size: 1.5rem; " href="{{route('privacy_policy')}}"> Policy </a>
                         </li>
                     </ul>
                 </nav>
@@ -54,7 +54,7 @@
             </div>
 
             <!-- Follow Us -->
-            <div class="col-md-2 follow p-3 col-sm-12">
+            <div class="col-md-2 col-sm-12 follow p-3 ">
 
                 <h4 class="mb-5" style="color: #FFF;">Follow Us </h4>
 

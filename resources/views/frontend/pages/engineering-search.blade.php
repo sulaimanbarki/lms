@@ -1,7 +1,19 @@
 @include('frontend.layouts.header')
 
-<!-- End Header-->
+<!-- KaTeX dependency -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha256-M6KFoDq9eUpmogkDgw6+3R3ZgUPSuFXnQyr8tskSfQs=" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha256-FyuFDgL3AT2Wi7dlv82fSVvxe2rPx1rRSVtMOWeRp6k=" crossorigin="anonymous"></script>
 
+<!-- Quill dependency -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.snow.css" integrity="sha256-jyIuRMWD+rz7LdpWfybO8U6DA65JCVkjgrt31FFsnAE=" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.min.js" integrity="sha256-xnX1c4jTWYY3xOD5/hVL1h37HCCGJx+USguyubBZsHQ=" crossorigin="anonymous"></script>
+
+<!-- MathQuill dependency -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@edtr-io/mathquill@0.11.0/build/mathquill.css" integrity="sha256-Qy/E+9TDDKI7fQ+y2hHMCBV96QiZs9mXWMOrD+/14IU=" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@edtr-io/mathquill@0.11.0/build/mathquill.min.js" integrity="sha256-1XldAnavTLoExr6gc0l1JD8cIzqRYhbi1eksEWsYdpY=" crossorigin="anonymous"></script>
+<!-- End Header-->
+<link rel="stylesheet" href="{{asset('mathquill4quill-master/mathquill4quill.css')}}">
 
 
 <!-- =================================== main  =======================================  -->
@@ -30,11 +42,11 @@
         <div class="row">
                 <div class="card">
                     <div class="card-header">
-                        <h2 style="font-size: 2.2rem;" >{{$question->question}}</h2>
+                        <h2 style="font-size: 2.2rem;" >  {!!$question->question!!}</h2>
                     </div>
                     <div class="card-body">
                         <blockquote class="blockquote mb-0">
-                            <p>{{$question->answer}}</p>
+                            <p>{!! $question->answer !!}</p>
 
                         </blockquote>
                     </div>
@@ -50,7 +62,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title fw-bold alert text-center alert-primary" style="font-family: 'Hind Guntur', sans-serif;
-font-family: 'Merriweather', serif;" > Random Questions</h5>
+font-family: 'Merriweather', serif;" > Related Questions</h5>
 
                         <div class="row" id="card-container">
                             <table class="table">
@@ -58,7 +70,6 @@ font-family: 'Merriweather', serif;" > Random Questions</h5>
                                     <tr style="font-size:1.3rem;" >
                                         <th scope="col">#</th>
                                         <th scope="col" >Question</th>
-                                        <th scope="col">Ans</th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
@@ -67,8 +78,7 @@ font-family: 'Merriweather', serif;" > Random Questions</h5>
                                     @foreach ($questions as $question)
                                     <tr style="font-size:1.2rem;" >
                                         <th>{{ $loop->iteration }}</th>
-                                        <td style="font-size:1.3rem;  font-family: 'Merriweather', serif;" > {{ Illuminate\Support\Str::limit($question->question, 50)}}</td>
-                                        <td style="font-size:1.3rem;  font-family: 'Merriweather', serif;">{{ Illuminate\Support\Str::limit($question->answer, 50) }}</td>
+                                        <td style="font-size:1.3rem;  font-family: 'Merriweather', serif; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="question_heading" > {!! $question->question !!}</td>
                                         <td><a href="/engineering/{{$question->id}}" style="font-size:1.1rem; font-family: 'Merriweather', serif;"
                                         style="font-size:1.3rem; font-family: 'Merriweather', serif;" class="btn btn-primary">View</a>
                                         </td>

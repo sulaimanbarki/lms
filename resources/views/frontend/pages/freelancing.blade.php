@@ -47,7 +47,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="blog-posts">
-                                <div class="row g-4 " id="blog-post">
+                                <div class="row g-3 " id="blog-post">
                                     @foreach ($blogs as $blog)
 
                                         <div class="col-md-4 col-sm-6" id="freelancing_card">
@@ -61,7 +61,35 @@
                                                             {{-- blog title is 100 characters long --}}
                                                             <h5 class="card-title">{{ substr($blog->title,0,50) }}</h5>
                                                             <p class="card-text"></p>
+
+                                                            @auth
                                                             <a href="{{ route('freelancingShow', $blog->id) }}" class="btn btn-primary">Read More</a>
+                                                            @else
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                                View
+                                                            </button>
+
+                                                            <!-- Modal -->
+                                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h3 class="modal-title" id="exampleModalLabel">
+                                                                                Login</h3>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <h4 style="text-align: center;color: red;">Please Login First</h4>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <a  href="https://engineeringgurru.com/login"  class="btn btn-secondary" >Login</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            @endauth
+
                                                         </div>
                                                     </div>
                                                 </div>

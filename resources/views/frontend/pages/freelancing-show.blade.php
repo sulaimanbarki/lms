@@ -24,9 +24,8 @@
 
                 <!-- display single question -->
                 <div class="container mt-5">
-                    <div class="row " id="freelacing_show_img">>
+                    <div class="row " id="freelacing_show_img">
                         <div class="col-md-12">
-
                             <h2 style="font-size:3rem; " >{{$blog->title}}</h2>
                             <hr>
                             <img src="{{ asset('uploads/thumbnail/'.$blog->thumbnail) }}" class="img-fluid img-fluid card-img-top freelacing_img my-3 " style="width: 100%; height:45rem;" id="freelacing_show_img" alt="...">

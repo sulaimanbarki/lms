@@ -25,10 +25,10 @@
                         @php
                             $subjects = \App\Models\Subject::all();
                         @endphp
-                        <div class="form-group">
+                        <div class="form-group d-none">
                             <label for="subject_id">Subject</label>
                             <select name="subject_id" id="subject_id" class="form-control">
-                                <option value="">Select Subject</option>
+                                <option value="1">Select Subject</option>
                                 @foreach ($subjects as $subject)
                                     <option value="{{$subject->id}}">{{$subject->name}}</option>
                                 @endforeach

@@ -56,14 +56,14 @@
     {{-- main content --}}
             <div>
                 <!-- display single question -->
-                <div class="container-fluid">
+                <div class="container">
                     {{-- display youtube playlist --}}
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
+                    <div class="row my-5 ">
+                        <div class="container d-flex justify-content-center " >
+                            <div class="card" style="width: 75%; height:50%; ">
                                 <div class="card-header">
-                                    <h2>{{$video->title}}</h2>
+                                    <h2 style="font-size:2.3rem; font-family: 'Noto Sans Display', sans-serif; margin-left:1rem;" >{{$video->title}}</h2>
                                 </div>
                                 @php
                                     $firstId = explode(',', $video->video_url)[0];
@@ -79,16 +79,23 @@
                                         </div>
                                         {{-- video description --}}
                                         <div class="col-md-12">
-                                            <div class="card-body">
-                                                <h5 class="card-title">{{$video->title}}</h5>
-                                                <p class="card-text">{{$video->description}}</p>
+
+                                            <div class="card mt-2 ">
+                                                <div class="card-header">
+                                                   <h2 class="card-title" style="font-size: 2.3rem;" >{{$video->title}}</h2>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p class="card-text">{{$video->description}}</p>
+                                                </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
